@@ -1,0 +1,84 @@
+:root {
+  --lime: #caff6d;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #e9ede6;
+  background: #0d100e;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at 2% 24%, #caff6d0a 0, transparent 24rem),
+    radial-gradient(ellipse at 98% 78%, #9b8aff0a 0, transparent 28rem),
+    radial-gradient(ellipse at 50% -18%, #caff6d0b 0, transparent 40%),
+    linear-gradient(180deg, #0d100e 0%, #0b0e0c 100%);
+}
+
+body::before,
+body::after {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  content: '';
+}
+
+body::before {
+  opacity: 0.42;
+  background-image:
+    radial-gradient(circle, #d8ffbd18 0.8px, transparent 1px),
+    linear-gradient(90deg, #ffffff05 1px, transparent 1px),
+    linear-gradient(#ffffff04 1px, transparent 1px);
+  background-size: 28px 28px, 112px 112px, 112px 112px;
+  mask-image: linear-gradient(90deg, #000 0%, transparent 24%, transparent 76%, #000 100%);
+}
+
+body::after {
+  opacity: 0.62;
+  background:
+    radial-gradient(circle at 4% 16%, #caff6d16 0 1px, transparent 2px),
+    radial-gradient(circle at 96% 34%, #b9aaff22 0 1px, transparent 2px),
+    radial-gradient(circle at 95% 88%, #caff6d18 0 2px, transparent 3px),
+    radial-gradient(ellipse at 0% 52%, #caff6d09, transparent 18rem),
+    radial-gradient(ellipse at 100% 22%, #9888ff08, transparent 20rem);
+}
+
+button,
+input,
+textarea,
+select { font: inherit; }
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #caff6d;
+  color: #11170d;
+}
